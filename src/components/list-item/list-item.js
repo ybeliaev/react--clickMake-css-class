@@ -24,7 +24,7 @@ export default class ListItem extends Component {
     }
     return (
       <span className={classNames}>
-        <span className="todo-list-item-label" onClick={onDone}>
+        <span className="list-item-label" onClick={onDone}>
           {label}
         </span>
         <button className="btn btn-exclamation" onClick={onImportant}>
