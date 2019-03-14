@@ -15,7 +15,7 @@ export default class ListItem extends Component {
       onDone,
       onDeletedItem
     } = this.props;
-    let classNames = "list-item";
+    let classNames = "wrapper-list-item";
     if (done) {
       classNames += " done";
     }
