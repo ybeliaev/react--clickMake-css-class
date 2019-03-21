@@ -7,14 +7,7 @@ export default class ListItem extends Component {
     important: false
   };
   render() {
-    const {
-      label,
-      important,
-      done,
-      onImportant,
-      onDone,
-      onDeletedItem
-    } = this.props;
+    const { label, important, done, onImportant, onDone } = this.props;
     let classNames = "wrapper-list-item";
     if (done) {
       classNames += " done";
@@ -30,7 +23,7 @@ export default class ListItem extends Component {
         <button className="btn btn-exclamation" onClick={onImportant}>
           <i className="fa fa-exclamation" />
         </button>
-        <button type="button" className="btn btn-trash" onClick={onDeletedItem}>
+        <button type="button" className="btn btn-trash">
           <i className="fa fa-trash-o" />
         </button>
       </span>
