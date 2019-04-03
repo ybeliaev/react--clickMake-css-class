@@ -14,9 +14,9 @@ export default class ListItem extends Component {
     });
   };
   onMarkImportant = () => {
-    this.setState(state => {
+    this.setState(({ important }) => {
       return {
-        important: !state.important
+        important: !important
       };
     });
   };
