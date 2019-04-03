@@ -6,8 +6,23 @@ export default class ListItem extends Component {
     done: false,
     important: false
   };
+  onMarkDone = () => {
+    this.setState(state => {
+      return {
+        done: !state.done
+      };
+    });
+  };
+  onMarkImportant = () => {
+    this.setState(state => {
+      return {
+        important: !state.important
+      };
+    });
+  };
   render() {
-    const { label, important, done, onImportant, onDone } = this.props;
+    const { label } = this.props;
+    const { important, done } = this.state;
     let classNames = "wrapper-list-item";
     if (done) {
       classNames += " done";
@@ -17,10 +32,10 @@ export default class ListItem extends Component {
     }
     return (
       <span className={classNames}>
-        <span className="list-item-label" onClick={onDone}>
+        <span className="list-item-label" onClick={this.onMarkDone}>
           {label}
         </span>
-        <button className="btn btn-exclamation" onClick={onImportant}>
+        <button className="btn btn-exclamation" onClick={this.onMarkImportant}>
           <i className="fa fa-exclamation" />
         </button>
         <button type="button" className="btn btn-trash">
