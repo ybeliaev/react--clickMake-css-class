@@ -14,7 +14,7 @@ export default class App extends Component {
       this.createItem("Read book of Hemingway")
     ]
   };
-  createItem(label, done = false, important = false) {
+  createItem(label, done, important) {
     return {
       label,
       done,
