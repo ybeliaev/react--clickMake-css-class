@@ -9,11 +9,7 @@ const List = ({ someProps, onToggleImportant, onToggleDone }) => {
 
     return (
       <li key={id} className="list-group-item">
-        <ListItem
-          {...itemProps}
-          onImportant={() => onToggleImportant(id)}
-          onDone={() => onToggleDone(id)}
-        />
+        <ListItem {...itemProps} />
       </li>
     );
   });
