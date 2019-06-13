@@ -26,6 +26,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="app">
+        <h1>Компоненты с состоянием</h1>
         <List someProps={this.state.someData} />
       </div>
     );
